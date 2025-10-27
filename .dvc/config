@@ -1,0 +1,6 @@
+[core]
+    remote = s3-remote
+['remote "gdrive-remote"']
+    url = gdrive://19pb1OpKa2y1RLrvMcHE3xKJEG2OOYYT4
+['remote "s3-remote"']
+    url = s3://property-forecast-dvc
