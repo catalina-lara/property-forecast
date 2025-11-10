@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/250924501178692824/6e86cb8f335548a8b66ac0249d5fa341/artifacts
+deleted_time: 1762748950948
+end_time: 1762748803487
+entry_point_name: ''
+experiment_id: '250924501178692824'
+lifecycle_stage: deleted
+run_id: 6e86cb8f335548a8b66ac0249d5fa341
+run_name: PLS_Regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762748796189
+status: 3
+tags: []
+user_id: Lara_

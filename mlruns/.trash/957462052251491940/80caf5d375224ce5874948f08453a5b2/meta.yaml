@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/957462052251491940/80caf5d375224ce5874948f08453a5b2/artifacts
+deleted_time: 1762749410900
+end_time: 1762749122328
+entry_point_name: ''
+experiment_id: '957462052251491940'
+lifecycle_stage: deleted
+run_id: 80caf5d375224ce5874948f08453a5b2
+run_name: PCA_Regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762749115513
+status: 3
+tags: []
+user_id: Lara_
