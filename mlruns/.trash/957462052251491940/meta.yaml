@@ -1,8 +1,0 @@
-artifact_location: file:///C:/Users/Lara_/property-forecast/mlruns/957462052251491940
-creation_time: 1762749111679
-experiment_id: '957462052251491940'
-last_update_time: 1762749410900
-lifecycle_stage: deleted
-name: Property_forecast
-tags:
-  mlflow.experimentKind: custom_model_development
