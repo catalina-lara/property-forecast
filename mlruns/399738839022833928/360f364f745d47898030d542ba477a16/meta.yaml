@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/360f364f745d47898030d542ba477a16/artifacts
+deleted_time: 1762791310903
 end_time: 1762787985249
 entry_point_name: ''
 experiment_id: '399738839022833928'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 360f364f745d47898030d542ba477a16
 run_name: Lasso_Regression
 source_name: ''

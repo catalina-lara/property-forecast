@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/103bfa03e64045e3be8e005475b0e068/artifacts
+deleted_time: 1762791310882
 end_time: 1762787965821
 entry_point_name: ''
 experiment_id: '399738839022833928'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 103bfa03e64045e3be8e005475b0e068
 run_name: Ridge_Regression
 source_name: ''

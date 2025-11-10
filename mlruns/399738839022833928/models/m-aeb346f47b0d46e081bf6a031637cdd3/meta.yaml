@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/models/m-aeb346f47b0d46e081bf6a031637cdd3/artifacts
+creation_timestamp: 1762791152331
+experiment_id: '399738839022833928'
+last_updated_timestamp: 1762791156874
+model_id: m-aeb346f47b0d46e081bf6a031637cdd3
+model_type: null
+name: DecisionTree_Model
+source_run_id: 8559475da644400b85a25aba1f800519
+status: 2
+status_message: null
