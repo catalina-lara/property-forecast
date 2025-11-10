@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/1acb54a8eb6945aa980e8765e3250f6f/artifacts
+end_time: 1762787961562
+entry_point_name: ''
+experiment_id: '399738839022833928'
+lifecycle_stage: active
+run_id: 1acb54a8eb6945aa980e8765e3250f6f
+run_name: LinearRegression_SelectKBest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762787956802
+status: 3
+tags: []
+user_id: Lara_

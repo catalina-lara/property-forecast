@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/736fddd8541640bcb3e71d6fd2a47e02/artifacts
+deleted_time: 1762787918444
 end_time: 1762749409235
 entry_point_name: ''
 experiment_id: '399738839022833928'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 736fddd8541640bcb3e71d6fd2a47e02
 run_name: PCA_Regression
 source_name: ''

@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/360f364f745d47898030d542ba477a16/artifacts
+end_time: 1762787985249
+entry_point_name: ''
+experiment_id: '399738839022833928'
+lifecycle_stage: active
+run_id: 360f364f745d47898030d542ba477a16
+run_name: Lasso_Regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762787965852
+status: 3
+tags: []
+user_id: Lara_

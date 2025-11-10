@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/32c4225a83324c538cf68473fd4c2804/artifacts
+end_time: 1762787991298
+entry_point_name: ''
+experiment_id: '399738839022833928'
+lifecycle_stage: active
+run_id: 32c4225a83324c538cf68473fd4c2804
+run_name: DecisionTree_Regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762787985275
+status: 3
+tags: []
+user_id: Lara_

@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/842986875f7549d1bb673bde6a95224d/artifacts
+deleted_time: 1762787918444
 end_time: 1762749417132
 entry_point_name: ''
 experiment_id: '399738839022833928'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 842986875f7549d1bb673bde6a95224d
 run_name: PLS_Regression
 source_name: ''

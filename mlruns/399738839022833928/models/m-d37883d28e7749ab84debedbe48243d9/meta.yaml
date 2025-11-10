@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/models/m-d37883d28e7749ab84debedbe48243d9/artifacts
+creation_timestamp: 1762787981157
+experiment_id: '399738839022833928'
+last_updated_timestamp: 1762787985241
+model_id: m-d37883d28e7749ab84debedbe48243d9
+model_type: null
+name: Lasso_Model
+source_run_id: 360f364f745d47898030d542ba477a16
+status: 2
+status_message: null

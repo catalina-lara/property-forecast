@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/4a5bfbf726344d8782d3f3907dbfbef2/artifacts
+end_time: 1762788081517
+entry_point_name: ''
+experiment_id: '399738839022833928'
+lifecycle_stage: active
+run_id: 4a5bfbf726344d8782d3f3907dbfbef2
+run_name: RandomForest_Regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762787991325
+status: 3
+tags: []
+user_id: Lara_

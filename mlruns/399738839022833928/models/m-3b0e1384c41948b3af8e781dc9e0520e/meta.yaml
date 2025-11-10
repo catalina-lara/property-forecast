@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/models/m-3b0e1384c41948b3af8e781dc9e0520e/artifacts
+creation_timestamp: 1762787946395
+experiment_id: '399738839022833928'
+last_updated_timestamp: 1762787950291
+model_id: m-3b0e1384c41948b3af8e781dc9e0520e
+model_type: null
+name: PLS_Regression_Model
+source_run_id: fce641ea1b8f4c6089f01a189e67c7d3
+status: 2
+status_message: null

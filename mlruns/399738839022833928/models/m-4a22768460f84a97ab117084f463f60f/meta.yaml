@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/models/m-4a22768460f84a97ab117084f463f60f/artifacts
+creation_timestamp: 1762788077331
+experiment_id: '399738839022833928'
+last_updated_timestamp: 1762788081505
+model_id: m-4a22768460f84a97ab117084f463f60f
+model_type: null
+name: RandomForest_Model
+source_run_id: 4a5bfbf726344d8782d3f3907dbfbef2
+status: 2
+status_message: null

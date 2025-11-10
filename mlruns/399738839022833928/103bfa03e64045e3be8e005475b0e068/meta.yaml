@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Lara_/property-forecast/mlruns/399738839022833928/103bfa03e64045e3be8e005475b0e068/artifacts
+end_time: 1762787965821
+entry_point_name: ''
+experiment_id: '399738839022833928'
+lifecycle_stage: active
+run_id: 103bfa03e64045e3be8e005475b0e068
+run_name: Ridge_Regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762787961608
+status: 3
+tags: []
+user_id: Lara_
