@@ -1,0 +1,16 @@
+# carpetas innecesarias
+.ipynb_checkpoints/
+__pycache__/
+notebooks/
+data/
+.dvc/
+  
+# archivos pesados o de documentación
+Entrega 2 - Grupo 32.pdf
+Tablero-ejemplo.pdf
+Tablero.ipynb
+pantallazos jmm.docx
+properati-preliminar.ipynb
+
+# cualquier .ipynb
+*.ipynb
