@@ -27,7 +27,7 @@ st.title("PROTOTIPO FUNCIONALIDAD VALORIZACION")
 # -------------------------
 # Rutas de archivos
 # -------------------------
-BASE_DIR = r"C:\Users\jorge.marin\NODRIVE\COURSERA\2025-5 Despliegue\Proyecto\Entrega2-jmm"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PATH_DATA_MODEL = os.path.join(BASE_DIR, "datalimpio_modelo_final.csv")
 PATH_DATAT = os.path.join(BASE_DIR, "dataTlimpio.csv")
 

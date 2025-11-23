@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-BASE_DIR = r"C:\Users\jorge.marin\NODRIVE\COURSERA\2025-5 Despliegue\Proyecto\Entrega2-jmm"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "model")
 MODEL_PATH = os.path.join(MODEL_DIR, "best_model.pkl")
 COLUMNS_PATH = os.path.join(MODEL_DIR, "model_columns.pkl")
