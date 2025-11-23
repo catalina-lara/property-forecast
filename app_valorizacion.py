@@ -7,7 +7,16 @@ from folium import Rectangle, CircleMarker
 from branca.colormap import LinearColormap
 from streamlit_folium import st_folium
 import plotly.express as px
+import sys
 import os
+
+# Agregar la ruta del archivo actual al path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
+
+import pickle
+# importar la función predict (asumiendo archivo predict.py en la misma carpeta)
+from predict import predict_batch
 
 # -------------------------
 # Configuración básica
@@ -134,41 +143,59 @@ if 'selected_results' not in st.session_state:
 buscar, nueva = st.columns([1,1])
 with buscar:
     if st.button("Buscar inmuebles"):
-        # filtrar (trabajar con TODO dataTlimpio, sin eliminar por end_date)
-        dff = dataTlimpio.dropna(subset=['price','surface_total','bedrooms','lat','lon','zona']).copy()
+        # filtrar inicialmente por area y dormitorios (trabajar con TODO dataTlimpio)
+        dff = dataTlimpio.dropna(subset=['surface_total','bedrooms','lat','lon','zona']).copy()
         dff = dff[
-            (dff['price'] >= precio_min) &
-            (dff['price'] <= precio_max) &
             (dff['surface_total'] >= area_min) &
             (dff['surface_total'] <= area_max) &
             (dff['bedrooms'] >= dormitorios)
         ]
         if dff.empty:
-            st.warning("No se encontraron inmuebles con esos filtros.")
+            st.warning("No se encontraron inmuebles dentro de area/dormitorios.")
             st.session_state['selected_results'] = pd.DataFrame()
         else:
-            # seleccionar 4 aleatorios y guardarlos en session_state (no se volverán a generar hasta nueva búsqueda)
-            sel = dff.sample(n=min(4, len(dff)), random_state=None).copy()
-            # calcular valorizacion por inmueble (val = (B-A)/A) usando tabla zona
-            rows = []
-            for _, r in sel.iterrows():
-                z = str(r['zona'])
-                table_z = zone_tables.get(z)
-                if table_z is None or table_z.empty:
-                    val_pct = np.nan
-                else:
-                    v = compute_zone_val_total(table_z)
-                    val_pct = v * 100 if v is not None else np.nan
-                rows.append({
-                    'id': r['id'],
-                    'valorizacion_anual_%': val_pct,
-                    'zona': z,
-                    'n_dormitorios': int(r['bedrooms']) if pd.notna(r['bedrooms']) else np.nan,
-                    'surface_total': r['surface_total'],
-                    'lat': r['lat'],
-                    'lon': r['lon']
-                })
-            st.session_state['selected_results'] = pd.DataFrame(rows)
+            # 1) Predecir price_per_m2 para TODOS los registros filtrados (batch)
+            data_tmp = predict_batch(dff)  # retorna price_per_m2_pred y price_pred_tmp
+
+            # 2) Filtrar por precio pronostico entre precio_min y precio_max
+            data_tmp_filtered = data_tmp[
+                (data_tmp['price_pred_tmp'] >= precio_min) &
+                (data_tmp['price_pred_tmp'] <= precio_max)
+            ].copy()
+
+            n_found = len(data_tmp_filtered)
+            if n_found == 0:
+                st.warning("No se encontró ningún inmueble con los criterios de búsqueda, por favor repite la búsqueda.")
+                # limpiar estado y regresar al modo inicial
+                st.session_state['selected_results'] = None
+                st.experimental_rerun()
+            else:
+                # seleccionar los 4 aleatorios (o menos si no hay 4)
+                sel = data_tmp_filtered.sample(n=min(4, n_found), random_state=None).copy()
+
+                # calcular valorizacion por inmueble usando tabla de zona (igual que antes)
+                rows = []
+                for _, r in sel.iterrows():
+                    z = str(r['zona'])
+                    table_z = zone_tables.get(z)
+                    if table_z is None or table_z.empty:
+                        val_pct = np.nan
+                    else:
+                        v = compute_zone_val_total(table_z)
+                        val_pct = v * 100 if v is not None else np.nan
+
+                    rows.append({
+                        'id': r.get('id', None),
+                        'valorizacion_anual_%': val_pct,
+                        'zona': z,
+                        'n_dormitorios': int(r['bedrooms']) if pd.notna(r['bedrooms']) else np.nan,
+                        'surface_total': r['surface_total'],
+                        'lat': r['lat'],
+                        'lon': r['lon'],
+                        'Precio pronostico': r['price_pred_tmp']  # nueva columna
+                    })
+                st.session_state['selected_results'] = pd.DataFrame(rows)
+
 
 with nueva:
     if st.button("Nueva búsqueda (limpiar)"):
